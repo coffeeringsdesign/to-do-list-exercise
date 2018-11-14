@@ -1,11 +1,11 @@
 import React from "react";
 import './Task.css';
 
-function Task({ description, important }){
+function Task({ description, important, id, toggleImportant }){
   return (
     <div className='task'>
       <h1>{description}</h1>
-      <p>{important ? 'true' : 'false'}</p>
+    <p onClick={() => { toggleImportant(id)}}>{important ? 'important' : 'not important'}</p>
     </div>
   );
 }
